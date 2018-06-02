@@ -113,20 +113,19 @@ INSERT INTO employee_has_location
   		  ('03252193245', 'UG'),
   		  ('45327241521', 'ZW'),
   		  ('42314223474', 'ZW'),
-  	    ('87465263175', 'CR'),
+  	      ('87465263175', 'CR'),
   		  ('87465263175', 'ZW'),
   		  ('76961561487', 'SM'),
   		  ('99705051442', 'GT'),
   		  ('06845733150', 'ZW'),
   		  ('06845733150', 'UG');
 
-# new statuses inProgress, canceledClient, before, after, during
-# status = ('in progress', 'canceled-client', 'canceled-system', 'completed')
+# status = ('inProgress', 'canceledClient', 'canceledSystem', 'before', 'after', 'during')
 DELETE FROM reservation;
 ALTER TABLE reservation AUTO_INCREMENT = 1;
 INSERT INTO reservation (status, cost, firstDay, lastDay, breakfast, Client_login, Room_idRoom)
   VALUES  ('canceledSystem', 280, '2018-03-24', '2018-03-26', 0, 'my_boy', '00101CR'),
-    	    ('inProgress', 280, '2018-03-24', '2018-03-26', 0, 'my_boy', '00101CR'),
+   	      ('inProgress', 280, '2018-03-24', '2018-03-26', 0, 'my_boy', '00101CR'),
           ('canceledClient', 500, '2018-03-21', '2018-03-26', 1, 'elkowicz13', '00201GT'),
           ('after', 230, '2018-02-20', '2018-02-21', 0, 'breakingbad', '00102GP'),
           ('canceledClient', 350, '2018-03-13', '2018-03-15', 0, 'lospolosermanos', '00202SM'),

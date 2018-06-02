@@ -87,7 +87,7 @@ ENGINE = InnoDB;
 -- Table `hotel_management_panel_inserts`.`Reservation`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `hotel_management_panel_inserts`.`Reservation` (
-  `idReservation` INT UNSIGNED NOT NULL,
+  `idReservation` INT AUTO_INCREMENT,
   `status` ENUM ('inProgress', 'canceledClient', 'canceledSystem', 'before', 'after', 'during') NOT NULL,
   `cost` INT UNSIGNED NOT NULL,
   `firstDay` DATE NOT NULL,
